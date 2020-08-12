@@ -3,9 +3,10 @@ t = int(input())
 for i in range(t):
     s = input()
     a = [i for i in s]
-    a = list(tuple(a)) # Nen phai chuyen sang list
-    b = sorted(tuple(a)) #Tra ve 1 list
-    if a==b or a==b[::-1]:
+    a = list(set(a)) 
+    print(a)
+    print(sorted(a))
+    if a==sorted(a) or a[::-1]==sorted(a):
         print("YES")
     else:
         print("NO")
