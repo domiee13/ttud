@@ -17,15 +17,18 @@ int main(){
     int t;
     cin>>t;
     while(t--){
-        long n;
+        long n,i;
         cin>>n;
-        if(n%2!=0) cout<<0<<endl;
-        else{
-            long res = 0;
-            // long tmp = n/2;
-            // res = (n-2)/tmp +1;
-            cout<<res<<endl;
+        long res = 0;
+        for(long i = 2;i*i<n;i++){
+            if(n%i==0){
+                if(i%2==0) res++;
+                if((n/i)%2==0) res++;
+            }
         }
-    }
+        if(i*i==n && i%2==0) res++;
+        if(n%2==0) res++;
+        cout<<res<<endl;
+}
     return 0;
 }

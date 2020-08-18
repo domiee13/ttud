@@ -1,4 +1,4 @@
-
+#problem with input
 s = ['2','3','5','7']
 
 def check(n):
@@ -8,9 +8,14 @@ def check(n):
             return False
     return True
 
-inp = input()
-a = [ i for i in inp.split(" ")]
-
+a= []
+c=1
+n = input()
+while n and c<=50000:
+    a.append(n)
+    n = input()
+    c = c+1
+#Display result
 res = {}
 for i in a:
     if check(i):
