@@ -9,7 +9,7 @@
 
 # Đưa ra kết quả mỗi test theo từng dòng. Nếu không có đáp án, in ra -1.
 
-t = long long(input())
+t = int(input())
 
 def sum(a):
     res = 0
@@ -22,11 +22,11 @@ def sum(a):
 for i in range(t):
     ok = False
     s,d = input().split(" ")
-    s,d = long long(s),long long(d)
+    s,d = int(s),int(d)
     for i in range(10**(d-1),10**(d)):
         if sum(i)==s:
-            prlong long(i)
+            print(i)
             ok = True
             break
     if not ok:
-        prlong long(-1)
+        print(-1)

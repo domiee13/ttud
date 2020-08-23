@@ -10,41 +10,41 @@
 
 using namespace std;
 
-long long pos[50], t[50], stop=0,n,s;
+int pos[50], t[50], stop=0,n,s;
 bool ok =false;
 
 //Sinh to hop
-void sinh(long long k){
-    long long i = k;
+void sinh(int k){
+    int i = k;
     while(i>0 && pos[i]==n-k+i) i--;
     if(i==0) stop=1;
     else{
         pos[i]++;
-        for(long long j=i+1;j<=k;j++){
+        for(int j=i+1;j<=k;j++){
             pos[j]=pos[j-1]+1;
         }
     }
 }
 
-long long main(){
-    long long T;
+int main(){
+    int T;
     cin>>T;
     while(T--){    
         cin>>n>>s;
         //Nhap gia tri tien
-        for(long long i = 1;i<=n;i++){
+        for(int i = 1;i<=n;i++){
             cin>>t[i];
         }
-        for(long long i = 1;i<=n;i++){
+        for(int i = 1;i<=n;i++){
             stop = 0;
             ok = false;
             //Khoi tao
-            for(long long j=1;j<=i;j++){
+            for(int j=1;j<=i;j++){
                 pos[j]=j;
             }
             while(!stop){
-                long long res =0;
-                for(long long j = 1;j<=i;j++){
+                int res =0;
+                for(int j = 1;j<=i;j++){
                     res+=t[pos[j]];
                 }
                 if(res==s){

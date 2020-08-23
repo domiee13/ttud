@@ -13,11 +13,11 @@
 
 using namespace std;
 
-long long main(){
-    long long t;
+int main(){
+    int t;
     cin>>t;
     while(t--){
-        long long tu, mau;
+        int tu, mau;
         cin>>tu>>mau;
     }
 }

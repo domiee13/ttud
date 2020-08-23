@@ -10,9 +10,9 @@
 
 # Với mỗi test, in ra đáp án trên một dòng.
 
-t = long long(input())
+t = int(input())
 mod = 10**9+7
 for i in range(t):
     n,k = input().split(" ")
-    n,k = long long(n),long long(k)
-    prlong long((n**k)%mod)
+    n,k = int(n),int(k)
+    print((n**k)%mod)

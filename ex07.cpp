@@ -10,30 +10,30 @@
 
 using namespace std;
 
-long long a[6];
-long long pos[6];
-long long n = 6,k=3,sum=0;
+int a[6];
+int pos[6];
+int n = 6,k=3,sum=0;
 bool ok = false;
 
 void init(){
-    for(long long i = 1;i<=n;i++){
+    for(int i = 1;i<=n;i++){
         pos[i]=i;
     }
 }
 
 void display(){
-    for(long long i =1;i<=k;i++){
+    for(int i =1;i<=k;i++){
         cout<<pos[i]<<" ";
     }
     cout<<endl;
 }
 
-void backTrack(long long i){
-    for(long long j = pos[i-1]+1;j<=n-k+i;j++){
+void backTrack(int i){
+    for(int j = pos[i-1]+1;j<=n-k+i;j++){
         pos[i]=j;
         if(i==k){
-            long long s=0;
-            for(long long i = 1;i<=k;i++){
+            int s=0;
+            for(int i = 1;i<=k;i++){
                 s+=a[pos[i]];
             }
             if(s==sum-s){
@@ -46,12 +46,12 @@ void backTrack(long long i){
     }
 }
 
-long long main(){
-    long long t;
+int main(){
+    int t;
     cin>>t;
     while(t--){
         init();
-        for(long long i = 1;i<=6;i++){
+        for(int i = 1;i<=6;i++){
             cin>>a[i];
             sum+=a[i];
         }

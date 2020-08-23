@@ -1,9 +1,9 @@
-t = long long(input())
+t = int(input())
 
 for i in range(t):
     s = input()
     a = [i for i in s if i.isnumeric()]
-    if long long(a[0])+long long(a[1])==long long(a[2]):
-        prlong long("YES")
+    if int(a[0])+int(a[1])==int(a[2]):
+        print("YES")
     else:
-        prlong long("NO")
+        print("NO")

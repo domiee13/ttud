@@ -1,5 +1,5 @@
 # Time limit
-t = long long(input())
+t = int(input())
 
 for i in range(t):
     ok = False
@@ -7,6 +7,6 @@ for i in range(t):
     s = input().split(" ")
     a = [i for i in s if s.count(i)>1]
     if len(a)==0:
-        prlong long("NO")
+        print("NO")
     else:
-        prlong long(a[0])
+        print(a[0])

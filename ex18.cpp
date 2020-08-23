@@ -5,14 +5,14 @@ using namespace std;
 
 long long sum(vector<long long> a){
     long long res = 0;
-    for(long long i  = 0;i<a.size();i++){
+    for(int i  = 0;i<a.size();i++){
         res+= a[i];
     }
     return res;
 }
 
-long long main(){
-    long long t;
+int main(){
+    int t;
     cin>>t;
     while(t--){
         long long n;

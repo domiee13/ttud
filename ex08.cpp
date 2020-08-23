@@ -13,8 +13,8 @@
 
 using namespace std;
 
-long long main(){
-    long long t;
+int main(){
+    int t;
     cin>>t;
     while(t--){
         long n,i;

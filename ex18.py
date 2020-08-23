@@ -1,14 +1,14 @@
-t = long long(input())
+t = int(input())
 
 for i in range(t):
-    a = long long(input())
+    a = int(input())
     l = []
-    k = [long long(i) for i in str(a) if i.isnumeric()]
+    k = [int(i) for i in str(a) if i.isnumeric()]
     for i in range(2,a):
         while a%i==0:
             l.append(i)
             a = a/i
     if sum(k)==sum(l):
-        prlong long("YES")
+        print("YES")
     else:
-        prlong long("NO")
+        print("NO")

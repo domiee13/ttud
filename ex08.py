@@ -1,9 +1,9 @@
-t = long long(input())
+t = int(input())
 
 for i in range(t):
-    n = long long(input())
+    n = int(input())
     if n%2!=0:
-        prlong long(0)
+        print(0)
     else:
         a = [i for i in range(2,n+1) if i%2==0 and n%i==0]
-        prlong long(len(a))
+        print(len(a))

@@ -1,1 +1,1 @@
-prlong long("CLB Lap Trinh PTIT")
+print("CLB Lap Trinh PTIT")

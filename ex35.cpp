@@ -33,8 +33,8 @@ long long Pow(long long a, long long b){
     if(b%2==1) return res*a%mod;
     return res%mod;
 }
-long long main(){
-    long long t;
+int main(){
+    int t;
     cin>>t;
     while(t--){
         cin>>n>>k;

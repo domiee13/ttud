@@ -34,13 +34,13 @@ long long fibo(long long n){
 void init(){
     F[0]=0;
     F[1]=1;
-    for(long long i = 2;i<=1000000000-2;i++){
+    for(int i = 2;i<=1000000000-2;i++){
         F[i] = F[i-2]+F[i-1];
     }
 }
 
-long long main(){
-    long long t;
+int main(){
+    int t;
     cin>>t;
     init();
     while(t--){

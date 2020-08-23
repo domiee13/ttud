@@ -15,31 +15,31 @@
 
 using namespace std;
 
-long long main(){
-    long long t;
+int main(){
+    int t;
     cin>>t;
     while(t--){
-        long long n,m;
+        int n,m;
         cin>>n>>m;
-        long long a[n+1][m+1];
-        long long dp[n+1][m+1];
+        int a[n+1][m+1];
+        int dp[n+1][m+1];
         //Reset a va dp, ca dp[0][x] va dp[x][0]
-        for(long long i = 0;i<=n;i++){
-            for(long long j = 0;j<=m;j++){
+        for(int i = 0;i<=n;i++){
+            for(int j = 0;j<=m;j++){
                 a[i][j]=dp[i][j]=0;
             }
         }
         //Nhap 
-        for(long long i = 1;i<=n;i++){
-            for(long long j = 1;j<=m;j++){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=m;j++){
                 cin>>a[i][j];
                 dp[i][j]=0;
             }
         }
         //Quy hoach dong
         dp[1][1]=1;//Diem dau tien chi can 1 buoc
-        for(long long i = 1;i<=n;i++){
-            for(long long j = 1;j<=m;j++){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=m;j++){
                 if(i==1 && j==1) continue;
                 dp[i][j] = dp[i-1][j]+dp[i][j-1];
             }

@@ -13,7 +13,7 @@
 
 using namespace std;
 
-long long main(){
+int main(){
     long long t;
     cin>>t;
     while(t--){

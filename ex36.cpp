@@ -28,11 +28,11 @@ long long mul(long long n){
     else return mul(n/2)*mul(n/2);
 }
 
-long long main(){
-    long long t;
+int main(){
+    int t;
     cin>>t;
     while(t--){
-        long long n;
+        int n;
         long long k;
         cin>>n>>k;
         long long l = mul(n)/2;//2^(n-1)
