@@ -17,20 +17,24 @@ int main(){
     int t;
     cin>>t;
     while(t--){
+        //Danh dau da dem hay chua
+        bool d[10005] = {false};
         int k;
         cin>>k;
         string s;
         cin>>s;
         priority_queue<int, vector<int> > q;
         for(char i:s){
-            q.push(count(s.begin(),s.end(),i));
+            if(!d[i]){
+                q.push(count(s.begin(),s.end(),i));
+                d[i]= true;
+            }
         }
         for(int i =0;i<k;i++){
             int a = q.top();
             q.pop();
             a--;
             q.push(a);
-            cout<<a<<endl;
         }
         int res=0;
         while(q.size()>0){
