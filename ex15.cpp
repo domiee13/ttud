@@ -13,19 +13,19 @@
 
 using namespace std;
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
-        deque<int> dq;
-        int n;
+        deque<long long> dq;
+        long long n;
         cin>>n;
-        int tmp;
-        for(int i = 0;i<n;i++){
+        long long tmp;
+        for(long long i = 0;i<n;i++){
             cin>>tmp;
             dq.push_back(tmp);
         }
-        sort(dq.begin(),dq.end(),greater<int>());
+        sort(dq.begin(),dq.end(),greater<long long>());
         while(dq.size()){
             cout<<dq.front()<<" ";
             dq.pop_front();

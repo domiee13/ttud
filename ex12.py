@@ -9,17 +9,17 @@
 
 # Đưa ra kết quả mỗi test theo từng dòng. Nếu không tìm được đáp án in ra -1.
 
-t = int(input())
+t = long long(input())
 
 for i in range(t):
     s = input()
     res = []
     for i in s:
         tmp = s.replace(i,'')
-        t = int(tmp)**(1/3)
-        if int(t)**3 == int(tmp):
-            res.append(int(tmp))
+        t = long long(tmp)**(1/3)
+        if long long(t)**3 == long long(tmp):
+            res.append(long long(tmp))
     if len(res)==0:
-        print(-1)
+        prlong long(-1)
     else:  
-        print(max(res))
+        prlong long(max(res))

@@ -12,31 +12,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int a[1005];
-int n;
+long long a[1005];
+long long n;
 
 void init(){
-    for(int i =- 1;i<=n;i++){
+    for(long long i =- 1;i<=n;i++){
         a[i]=i;
     }
 }
 
 void input(){
     cin>>n;
-    for(int i = 1;i<=n;i++){
+    for(long long i = 1;i<=n;i++){
         cin>>a[i];
     }
 }
 
 void genNext(){
-    int i = n-1;
+    long long i = n-1;
     while(a[i]>a[i+1] && i>0) i--;
     if(i>0){
-        int j = n;
+        long long j = n;
         while(a[i]>a[j]) j--;
         swap(a[i],a[j]);
-        int l = i+1;
-        int r = n;
+        long long l = i+1;
+        long long r = n;
         while(l<r){
             swap(a[l],a[r]);
             l++;r--;
@@ -46,14 +46,14 @@ void genNext(){
 }
 
 void display(){
-    for(int i =1;i<=n;i++){
+    for(long long i =1;i<=n;i++){
         cout<<a[i]<<" ";
     }
     cout<<endl;
 }
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
         input();

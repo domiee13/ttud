@@ -13,20 +13,20 @@
 
 using namespace std;
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
-        int n;
+        long long n;
         cin>>n;
-        vector<int> a(n);
-        for(int i = 0;i<n;i++){
+        vector<long long> a(n);
+        for(long long i = 0;i<n;i++){
             cin>>a[i];
         }
         sort(a.begin(),a.end());
-        int s1 = 0;
-        int s2= 0;
-        for(int i = 0;i<n;i++){
+        long long s1 = 0;
+        long long s2= 0;
+        for(long long i = 0;i<n;i++){
             if(i%2==0) s1=s1*10+a[i];
             else s2 = s2*10+a[i];
         }

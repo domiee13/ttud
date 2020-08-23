@@ -3,7 +3,7 @@ using namespace std;
 
 #define MAX 50005
 
-bool isDigitPrime(int i) {
+bool isDigitPrime(long long i) {
     if (i == 0 || i == 1 || i == 4 ||
         i == 6 || i == 8 || i == 9)
             return false;
@@ -11,8 +11,8 @@ bool isDigitPrime(int i) {
     return true;
 }
 
-bool checkNumber(int n) {
-    int tmp, flag = 1;
+bool checkNumber(long long n) {
+    long long tmp, flag = 1;
     while (n != 0) {
         tmp = n % 10;
         n /= 10;
@@ -23,10 +23,10 @@ bool checkNumber(int n) {
     return true;
 }
 
-int main() {
-    int res[MAX], arr[MAX];
-    int count = 0;
-    for (int i = 0; i < MAX; i++) {
+long long main() {
+    long long res[MAX], arr[MAX];
+    long long count = 0;
+    for (long long i = 0; i < MAX; i++) {
         count++;
         cin >> arr[i];
         if (cin.get() == -1)
@@ -34,10 +34,10 @@ int main() {
     }
     
     memset(res, 0, sizeof(res));
-    unordered_map<int, int> mp;
-    int j = 0;
+    unordered_map<long long, long long> mp;
+    long long j = 0;
 
-    for (int i = 0; i < count; i++) {
+    for (long long i = 0; i < count; i++) {
         if (checkNumber(arr[i])) {
             mp[arr[i]]++;
             if (find(res, res + j, arr[i]) == (res + j)) {
@@ -47,7 +47,7 @@ int main() {
         }
     }
 
-    for (int i = 0; i < j; i++) {
+    for (long long i = 0; i < j; i++) {
         cout << res[i] << " " << mp.at(res[i]) << '\n';
     }
 

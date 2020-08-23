@@ -13,34 +13,34 @@
 
 using namespace std;
 
-int maxCrossSum(int a[], int l, int m,int h){// l can duoi, h can tren
-    int sum = 0;
-    int left_sum = INT_MIN, right_sum=INT_MIN;
-    for(int i  = m;i>=l;i--){
+long long maxCrossSum(long long a[], long long l, long long m,long long h){// l can duoi, h can tren
+    long long sum = 0;
+    long long left_sum = long long_MIN, right_sum=long long_MIN;
+    for(long long i  = m;i>=l;i--){
         sum+= a[i];
         if(sum>left_sum) left_sum = sum;
     }
-    for(int i  = m+1;i<=h;i++){
+    for(long long i  = m+1;i<=h;i++){
         sum+= a[i];
         if(sum>right_sum) right_sum = sum;
     }
     return left_sum+right_sum;
 }
 
-int maxSubSum(int a[],int l, int h){
+long long maxSubSum(long long a[],long long l, long long h){
     if(l==h) return a[l];
-    int m = (l+h)/2;
+    long long m = (l+h)/2;
     return max(max(maxSubSum(a,l,m),maxSubSum(a,m+1,h)),maxCrossSum(a,l,m,h));
 }
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
-        int n;
+        long long n;
         cin>>n;
-        int a[n];
-        for(int i = 0;i<n;i++){
+        long long a[n];
+        for(long long i = 0;i<n;i++){
             cin>>a[i];
         }
         cout<<maxSubSum(a,0,n-1)<<endl;

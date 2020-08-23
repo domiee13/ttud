@@ -8,7 +8,7 @@ using namespace std;
 
 long long F[100];
 
-char FiboWord(int n, long long k){
+char FiboWord(long long n, long long k){
     if(n==1) return 'A';
     if(n==2) return 'B';
     if(k<=F[n-2]){
@@ -17,15 +17,15 @@ char FiboWord(int n, long long k){
     return FiboWord(n-1,k-F[n-2]);
 }
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     F[0]=0;F[1]=1;
-    for(int i = 2;i<=92;i++){
+    for(long long i = 2;i<=92;i++){
         F[i] = F[i-2] + F[i-1];
     }
     while(t--){
-        int n;
+        long long n;
         long long k;
         cin>>n>>k;
         cout<<FiboWord(n,k)<<endl;

@@ -1,4 +1,4 @@
-t = int(input())
+t = long long(input())
 
 def gcd(a,b):
     if b==0:
@@ -7,6 +7,6 @@ def gcd(a,b):
 
 for i in range(t):
     a,b = input().split(" ")
-    a,b = int(a),int(b)
+    a,b = long long(a),long long(b)
     res = gcd(a,b)
-    print(res,int(a*b/res))
+    prlong long(res,long long(a*b/res))

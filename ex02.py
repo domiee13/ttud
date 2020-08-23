@@ -4,12 +4,12 @@
 
 # Kết quả: Mỗi bộ test viết ra YES hoặc NO, tương ứng với bộ dữ liệu vào
 
-t = int(input())
+t = long long(input())
 
 for i in range(t):
     s = input()
-    print(s[0],s[-1])
+    prlong long(s[0],s[-1])
     if s[0]==s[-1]:
-        print("YES")
+        prlong long("YES")
     else:
-        print("NO")
+        prlong long("NO")

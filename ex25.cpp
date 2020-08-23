@@ -13,21 +13,21 @@
 
 using namespace std;
 
-int a[1005];
-int n,k;
+long long a[1005];
+long long n,k;
 
 void init(){
-    for(int i = 1;i<=k;i++){
+    for(long long i = 1;i<=k;i++){
         a[i]=n-k+i;
     }
 }
 
 void genNext(){
-    int i = 1;
+    long long i = 1;
     while(a[i]==n-k+i && i<=k) i++;
     if(i>0){
         a[i]--;
-        for(int j = 1;j<i;j++){
+        for(long long j = 1;j<i;j++){
             a[j]++;
         }
     }
@@ -35,7 +35,7 @@ void genNext(){
 }
 
 void display(){
-    for(int i =1;i<=k;i++){
+    for(long long i =1;i<=k;i++){
         cout<<a[i]<<" ";
     }
     cout<<endl;
@@ -43,13 +43,13 @@ void display(){
 
 void input(){
     cin>>n>>k;
-    for(int i = 1;i<=k;i++){
+    for(long long i = 1;i<=k;i++){
         cin>>a[i];
     }
 }
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
         memset(a,0,sizeof(a));

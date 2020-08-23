@@ -2,19 +2,19 @@
 
 using namespace std;
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
-        int n;
+        long long n;
         cin>>n;
         vector<long> a(n);
         vector<long> res;
         bool ok = false;
-        for(int i = 0;i<n;i++){
+        for(long long i = 0;i<n;i++){
             cin>>a[i];
         }
-        for(int i = 0;i<n;i++){
+        for(long long i = 0;i<n;i++){
             if(count(a.begin(),a.end(),a[i])>1){
                 cout<<a[i]<<endl;
                 ok = true;

@@ -14,8 +14,8 @@ long long gcd(long a, long b){
     return gcd(b,a%b);
 }
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
         long a,b;

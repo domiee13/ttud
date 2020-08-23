@@ -14,16 +14,16 @@
 using namespace std;
 
 bool chuaxet[10005];
-int a[10005];
+long long a[10005];
 string s;
 
-void Try(int i){
-    for(int j = 0;j<s.size();j++){
+void Try(long long i){
+    for(long long j = 0;j<s.size();j++){
         if(chuaxet[j]){
             a[i] = j;
             chuaxet[j]=false;
             if(i==s.size()){
-                for(int l = 1;l<=s.size();l++){
+                for(long long l = 1;l<=s.size();l++){
                     cout<<s[a[l]];
                 }
                 cout<<" ";
@@ -34,8 +34,8 @@ void Try(int i){
     }
 }
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
         memset(chuaxet,true,sizeof(chuaxet));

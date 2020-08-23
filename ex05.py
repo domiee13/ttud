@@ -22,5 +22,5 @@ for i in a:
         res[i]= a.count(i)
 
 for i in res:
-    print(i,res[i])
+    prlong long(i,res[i])
     

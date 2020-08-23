@@ -17,13 +17,13 @@ string s;
 bool ok = false;
 
 void init(){
-    for(int i=0;i<s.size();i++){
+    for(long long i=0;i<s.size();i++){
         s[i]='1';
     }
 }
 
 void genNext(){
-    int j = s.size()-1;
+    long long j = s.size()-1;
     while(s[j]=='0'){
         s[j]='1';
         j--;
@@ -34,8 +34,8 @@ void genNext(){
     else init();
 }
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
         cin>>s;

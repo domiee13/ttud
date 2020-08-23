@@ -8,13 +8,13 @@
 
 using namespace std;
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
         string s;
         cin>>s;
-        int l = s.size();
+        long long l = s.size();
         if(s[0]==s[l-1]) cout<<"YES"<<endl;
         else cout<<"NO"<<endl;
     }

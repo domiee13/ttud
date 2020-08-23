@@ -9,14 +9,14 @@
 
 # Đưa ra kết quả mỗi test theo từng dòng.
 
-t = int(input())
+t = long long(input())
 
 for i in range(t):
     n = input()
     s = input()
     a = [i for i in s.split(" ")]
     for i in range(len(a)):
-        a[i] = int(a[i])
+        a[i] = long long(a[i])
     a = set(a) 
     s1 = max(a)-min(a)+1
-    print(s1-len(a))
+    prlong long(s1-len(a))

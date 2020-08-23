@@ -19,8 +19,8 @@
 
 using namespace std;
 
-int n;
-int a[100][100];
+long long n;
+long long a[100][100];
 bool ok = false;
 vector<string> res;
 bool chuaxet[100][100];
@@ -28,8 +28,8 @@ bool chuaxet[100][100];
 //Khoi tao cac gia tri
 void init(){
     cin>>n;
-    for(int i = 0;i<n;i++){
-        for(int j =0;j<n;j++){
+    for(long long i = 0;i<n;i++){
+        for(long long j =0;j<n;j++){
             cin>>a[i][j];
             chuaxet[i][j]=true;
         }
@@ -38,7 +38,7 @@ void init(){
     res.clear();
 }
 
-void backTrack(int i, int j, string s){
+void backTrack(long long i, long long j, string s){
     //Kiem tra xem co duong di khong
     if(!a[0][0] || !a[n-1][n-1]){
         ok =false;
@@ -75,8 +75,8 @@ void backTrack(int i, int j, string s){
     }
 }
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
         init();
@@ -84,7 +84,7 @@ int main(){
         if(!ok) cout<<-1;
         else{
             sort(res.begin(),res.end());
-            for(int i = 0;i<res.size();i++){
+            for(long long i = 0;i<res.size();i++){
                 cout<<res[i]<<" ";
             }
         }

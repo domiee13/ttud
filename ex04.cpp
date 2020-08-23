@@ -3,21 +3,21 @@
 using namespace std;
 
 bool tang(string s){
-    for(int i = 0;i<s.size()-1;i++){
+    for(long long i = 0;i<s.size()-1;i++){
         if(s[i]>s[i+1]) return false;
     }
     return true;
 }
 
 bool giam(string s){
-    for(int i = 0;i<s.size()-1;i++){
+    for(long long i = 0;i<s.size()-1;i++){
         if(s[i]<s[i+1]) return false;
     }
     return true;
 }
 
-int main(){
-    int t;
+long long main(){
+    long long t;
     cin>>t;
     while(t--){
         string s;
