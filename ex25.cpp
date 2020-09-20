@@ -16,35 +16,37 @@ using namespace std;
 int a[1005];
 int n,k;
 
-void init(){
-    for(int i = 1;i<=k;i++){
-        a[i]=n-k+i;
-    }
-}
-
-void genNext(){
-    int i = 1;
-    while(a[i]==n-k+i && i<=k) i++;
-    if(i>0){
-        a[i]--;
-        for(int j = 1;j<i;j++){
-            a[j]++;
+void gen(){
+    int i = k;
+    while(a[i]==n-k+i) i--;
+    if(i==k){//So cuoi cung khac n
+        while(a[i]==a[i-1]+1 && i>0) i--;
+        if(i==0){//1 2 3 ... k
+            for(int j=1;j<=k;j++){
+                cout<<n-k+j<<" ";
+            }
+            cout<<endl;
+        }
+        else{
+            a[i]--;
+            for(int j =i+1;j<=k;j++){
+                a[j]++;
+            }
+            for(int j=1;j<=k;j++){
+                cout<<a[j]<<" ";
+            }
+            cout<<endl;
         }
     }
-    else init();
-}
+    else{
+        int  i =k;
+        while(a[i]==a[i-1]+1) i--;
+        a[i]--;
+        for(int j=1;j<=k;j++){
+            cout<<a[j]<<" ";
+        }
+        cout<<endl;
 
-void display(){
-    for(int i =1;i<=k;i++){
-        cout<<a[i]<<" ";
-    }
-    cout<<endl;
-}
-
-void input(){
-    cin>>n>>k;
-    for(int i = 1;i<=k;i++){
-        cin>>a[i];
     }
 }
 
@@ -52,10 +54,11 @@ int main(){
     int t;
     cin>>t;
     while(t--){
-        memset(a,0,sizeof(a));
-        input();
-        genNext();
-        display();
+        cin>>n>>k;
+        for(int i  =1;i<=k;i++){
+            cin>>a[i];
+        }
+        gen();
     }
     return 0;
 }
